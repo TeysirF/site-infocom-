@@ -1,1 +1,54 @@
-# site-infocom-
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galerie Jutsu — Hero Mosaic</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <div class="wrap">
+            <a class="brand" href="#accueil" aria-label="Accueil">
+                <span class="brand__main">Galerie</span><span class="brand__tag">Jutsu</span>
+            </a>
+
+            <nav class="nav" aria-label="Navigation principale">
+                <button class="nav__toggle" aria-expanded="false" aria-controls="nav-list"
+                    aria-label="Ouvrir le menu">☰</button>
+
+                <ul id="nav-list" class="nav__list">
+                    <li><a href="#collections" class="nav__link">Collections</a></li>
+                    <li><a href="#expositions" class="nav__link">Expositions</a></li>
+                    <li><a href="#artistes" class="nav__link">Artistes</a></li>
+                    <li><a href="#contact" class="nav__link nav__cta">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-tools">
+                <button class="tool" aria-label="Recherche">🔍</button>
+                <button class="tool" aria-label="Langue">FR</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mini JS menu mobile -->
+    <script>
+        const toggle = document.querySelector('.nav__toggle');
+        const list = document.getElementById('nav-list');
+        toggle?.addEventListener('click', () => {
+            const open = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!open));
+            list.classList.toggle('is-open');
+        });
+    </script>
+</body>
+
+</html>
