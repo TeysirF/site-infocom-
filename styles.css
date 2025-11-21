@@ -604,3 +604,14 @@ body {
 .btn:hover::before {
     opacity: 1;
 }
+
+/* Responsive */
+@media (max-width: 800px) {
+    .collections-head {
+        margin-bottom: 40px;
+    }
+
+    .collections-sub {
+        font-size: 14px;
+    }
+}
