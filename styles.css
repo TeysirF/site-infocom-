@@ -555,3 +555,52 @@ body {
     opacity: 0.85;
     margin-top: 2px;
 }
+
+/* Bouton “Voir les expositions” */
+.collections-cta {
+    text-align: center;
+    margin-top: clamp(40px, 6vw, 70px);
+}
+
+.btn {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 14px 34px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, var(--olive) 0%, #b5c47b 100%);
+    color: #0a0a0a;
+    border-color: var(--olive);
+    box-shadow: 0 0 20px rgba(122, 132, 80, 0.4);
+}
+
+.btn span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animation subtile au hover */
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
