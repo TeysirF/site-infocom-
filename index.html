@@ -70,6 +70,122 @@
         </div>
     </section>
 
+    <!-- ===== COLLECTIONS ===== -->
+    <section id="collections" class="section-collections" aria-labelledby="titre-collections">
+        <div class="wrap">
+            <header class="collections-head">
+                <p class="eyebrow eyebrow--olive" aria-hidden="true">Sélection</p>
+                <h2 id="titre-collections" class="collections-title">Collections</h2>
+                <p class="collections-sub">
+                    Encres, calligraphies et sculptures réunies dans une sélection minimaliste et luxueuse.
+                </p>
+
+                <nav class="filtres" aria-label="Filtres des collections">
+                    <button class="puce active" type="button" data-filter="*">Tout</button>
+                    <button class="puce" type="button" data-filter="encre">Encre</button>
+                    <button class="puce" type="button" data-filter="calligraphie">Calligraphie</button>
+                    <button class="puce" type="button" data-filter="sculpture">Sculpture</button>
+                </nav>
+            </header>
+
+            <div class="grid-collections" role="list">
+
+                <!-- Carte 1 -->
+                <article class="card-art" role="listitem" data-cat="encre">
+                    <a class="card-link" href="#" aria-label="Voir l’œuvre : Montagnes brumeuses">
+                        <figure class="card-visuel">
+                            <img src="images/m2.png" alt="Encre japonaise — Montagnes brumeuses" loading="lazy"
+                                decoding="async" width="960" height="720">
+                            <figcaption class="card-overlay">
+                                <span class="badge">Encre</span>
+                                <h3 class="card-title">Montagnes brumeuses</h3>
+                                <p class="card-meta">Nihonga • 2022</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+
+                <!-- Carte 2 -->
+                <article class="card-art" role="listitem" data-cat="calligraphie">
+                    <a class="card-link" href="#" aria-label="Voir l’œuvre : Vent d’automne">
+                        <figure class="card-visuel">
+                            <img src="images/col-02.png" alt="Calligraphie — Vent d’automne" loading="lazy"
+                                decoding="async" width="960" height="720">
+                            <figcaption class="card-overlay">
+                                <span class="badge">Calligraphie</span>
+                                <h3 class="card-title">Vent d'automne</h3>
+                                <p class="card-meta">Shodo • 2024</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+
+                <!-- Carte 3 -->
+                <article class="card-art" role="listitem" data-cat="sculpture">
+                    <a class="card-link" href="#" aria-label="Voir l’œuvre : Kintsugi">
+                        <figure class="card-visuel">
+                            <img src="images/m3.png" alt="Sculpture — Kintsugi" loading="lazy" decoding="async"
+                                width="960" height="720">
+                            <figcaption class="card-overlay">
+                                <span class="badge">Sculpture</span>
+                                <h3 class="card-title">Kintsugi</h3>
+                                <p class="card-meta">Céramique • 2023</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+
+                <!-- Carte 4 -->
+                <article class="card-art" role="listitem" data-cat="encre">
+                    <a class="card-link" href="#" aria-label="Voir l’œuvre : Jardin nocturne">
+                        <figure class="card-visuel">
+                            <img src="images/col-01.png" alt="Encre — Jardin nocturne" loading="lazy" decoding="async"
+                                width="960" height="720">
+                            <figcaption class="card-overlay">
+                                <span class="badge">Encre</span>
+                                <h3 class="card-title">Jardin nocturne</h3>
+                                <p class="card-meta">Sumi-e • 2021</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+
+                <!-- Carte 5 -->
+                <article class="card-art" role="listitem" data-cat="calligraphie">
+                    <a class="card-link" href="#" aria-label="Voir l’œuvre : Silence">
+                        <figure class="card-visuel">
+                            <img src="images/m1.png" alt="Calligraphie — Silence" loading="lazy" decoding="async"
+                                width="960" height="720">
+                            <figcaption class="card-overlay">
+                                <span class="badge">Calligraphie</span>
+                                <h3 class="card-title">Silence</h3>
+                                <p class="card-meta">Shodo • 2020</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <!-- Carte 6 -->
+                <article class="card-art" role="listitem" data-cat="sculpture">
+                    <a class="card-link" href="#" aria-label="Voir l’œuvre : Pierre & Thé">
+                        <figure class="card-visuel">
+                            <img src="images/col-03.png" alt="Sculpture — Pierre & Thé" loading="lazy" decoding="async"
+                                width="960" height="720">
+                            <figcaption class="card-overlay">
+                                <span class="badge">Sculpture</span>
+                                <h3 class="card-title">Pierre & Thé</h3>
+                                <p class="card-meta">Pierre • 2019</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+            </div>
+
+            <div class="collections-cta">
+                <a href="#expositions" class="btn btn-contour"><span>Voir les expositions</span></a>
+            </div>
+        </div>
+    </section>
+
     <!-- Mini JS menu mobile -->
     <script>
         const toggle = document.querySelector('.nav__toggle');
