@@ -617,3 +617,127 @@ body {
         opacity: 1;
     }
 }
+
+/* ===== EXPOSITIONS (fond flouté) ===== */
+.section-expositions {
+    position: relative;
+    padding: clamp(64px, 9vw, 120px) 0;
+    color: #ededed;
+    isolation: isolate;
+    /* garantit superposition propre */
+    overflow: hidden;
+    background: #0a0a0a;
+    /* fallback si image absente */
+}
+
+/* Image de fond floutée (+ légère mise à l’échelle pour éviter les bords) */
+.section-expositions::before {
+    content: "";
+    position: absolute;
+    inset: -10% -10%;
+    background: url("images/m2.png") center/cover no-repeat;
+    filter: blur(8px) saturate(.95) brightness(.7);
+    transform: scale(1.05);
+    z-index: -2;
+}
+
+/* Voile/gradient pour lisibilité (cohérent avec la hero) */
+.section-expositions::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(0deg, rgba(0, 0, 0, .65) 0%, rgba(0, 0, 0, .35) 40%, rgba(0, 0, 0, .65) 100%),
+        radial-gradient(60% 40% at 50% 40%, rgba(122, 132, 80, .18) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.expo-contenu {
+    text-align: center;
+}
+
+.expo-entete {
+    max-width: 760px;
+    margin: 0 auto clamp(28px, 5vw, 46px);
+}
+
+.expo-titre {
+    font-family: "Sawarabi Mincho", serif;
+    font-weight: 400;
+    letter-spacing: .03em;
+    color: #fff;
+    font-size: clamp(28px, 5vw, 48px);
+    margin: 6px 0 8px;
+}
+
+.expo-sous {
+    color: rgba(255, 255, 255, .72);
+    margin: 0;
+}
+
+/* Grille de cartes verre dépoli */
+.expo-grille {
+    display: grid;
+    gap: clamp(14px, 2vw, 18px);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.expo-carte {
+    background: rgba(17, 17, 17, .55);
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .35);
+    backdrop-filter: blur(6px);
+    transition: transform .25s ease, box-shadow .3s ease, border-color .25s ease;
+}
+
+.expo-carte:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 48px rgba(0, 0, 0, .45);
+    border-color: rgba(255, 255, 255, .18);
+}
+
+.expo-nom {
+    margin: 0 0 6px;
+    font-family: "Sawarabi Mincho", serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: .01em;
+}
+
+.expo-meta {
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, .75);
+    font-size: 14px;
+}
+
+.section-expositions .btn.btn-contour {
+    border-color: rgba(255, 255, 255, .6);
+    color: #fff;
+}
+
+.section-expositions .btn.btn-contour:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, .2);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .expo-grille {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .expo-grille {
+        grid-template-columns: 1fr;
+    }
+
+    .expo-carte {
+        text-align: center;
+    }
+}
