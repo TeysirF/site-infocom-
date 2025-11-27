@@ -870,3 +870,23 @@ body {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+/* Responsive contact */
+@media (max-width: 980px) {
+    .contact-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 18px;
+    }
+
+    .contact-info {
+        margin: auto;
+        width: 70%;
+    }
+}
