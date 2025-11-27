@@ -235,18 +235,87 @@
                 </article>
 
             </div>
-    </section>
 
-    <!-- Mini JS menu mobile -->
-    <script>
-        const toggle = document.querySelector('.nav__toggle');
-        const list = document.getElementById('nav-list');
-        toggle?.addEventListener('click', () => {
-            const open = toggle.getAttribute('aria-expanded') === 'true';
-            toggle.setAttribute('aria-expanded', String(!open));
-            list.classList.toggle('is-open');
-        });
-    </script>
+            <!-- ===== CONTACT ===== -->
+            <section id="contact" class="section-contact" aria-labelledby="titre-contact">
+                <div class="wrap contact-wrap">
+                    <!-- Colonne gauche : infos -->
+                    <div class="contact-info">
+                        <p class="eyebrow eyebrow--olive">Discutons</p>
+                        <h2 id="titre-contact" class="contact-title">Contact Us</h2>
+                        <p class="contact-sub">
+                            Un brief, une idée, une exposition à planifier ? Notre équipe vous répond rapidement.
+                        </p>
+
+                        <ul class="contact-list" aria-label="Coordonnées">
+                            <li>
+                                <span class="label">Téléphone</span>
+                                <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                            </li>
+                            <li>
+                                <span class="label">Email</span>
+                                <a href="mailto:contact@galeriejutsu.fr">contact@galeriejutsu.fr</a>
+                            </li>
+                            <li>
+                                <span class="label">Studio</span>
+                                <address>123 Rue de Rivoli, 06000 Nice</address>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne droite : formulaire -->
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true"
+                        netlify-honeypot="bot-field" aria-describedby="contact-help">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p class="hidden">
+                            <label>Ne pas remplir : <input name="bot-field" /></label>
+                        </p>
+
+                        <p id="contact-help" class="sr-only">Tous les champs sont requis.</p>
+
+                        <p class="eyebrow" style="margin-bottom:8px;">DITES-NOUS TOUT</p>
+
+                        <div class="form-grid-2">
+                            <div class="form-field">
+                                <label for="nom">Nom</label>
+                                <input id="nom" name="nom" type="text" required autocomplete="name" />
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" required autocomplete="email" />
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="sujet">Sujet</label>
+                            <input id="sujet" name="sujet" type="text" placeholder="Ex : Expositions de Janvier 2026"
+                                required />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Parlez-nous de vos besoins…"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-contour btn-contact">
+                            <span>Envoyer</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+
+            <!-- Mini JS menu mobile -->
+            <script>
+                const toggle = document.querySelector('.nav__toggle');
+                const list = document.getElementById('nav-list');
+                toggle?.addEventListener('click', () => {
+                    const open = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', String(!open));
+                    list.classList.toggle('is-open');
+                });
+            </script>
 </body>
 
 </html>
