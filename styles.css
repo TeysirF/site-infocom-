@@ -131,24 +131,21 @@ body {
     color: #000;
 }
 
-/* outils droites */
-.nav-tools {
-    display: flex;
-    gap: 8px;
+.navbar .wrap {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
 }
 
-.tool {
-    border: 1px solid rgba(255, 255, 255, .28);
-    color: #fff;
-    background: transparent;
-    border-radius: 12px;
-    padding: 6px 10px;
-    cursor: pointer;
+.nav {
+    grid-column: 2;
+    /* centre le bloc nav */
 }
 
-.tool--menu {
-    padding: 6px 12px;
+.brand {
+    grid-column: 1;
 }
+
 
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
@@ -193,6 +190,20 @@ body {
         background-color: transparent;
         color: white;
 
+    }
+
+    .navbar .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        grid-column: unset;
+    }
+
+    .brand {
+        grid-column: unset;
     }
 }
 
