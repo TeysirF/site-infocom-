@@ -890,3 +890,43 @@ body {
         width: 70%;
     }
 }
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: #070707;
+    color: rgba(255, 255, 255, .75);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    padding: 28px 0;
+}
+
+.footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-copy {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+    color: var(--sable);
+    border-color: var(--sable);
+}
